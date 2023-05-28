@@ -48,7 +48,7 @@ function include_hash(string $file): mixed
     
     if (!is_file($file))
     {
-        trigger_error('Failed opening required \''.$file.'\' (include_path=\''.get_include_path().'\')', E_USER_WARNING);
+        trigger_error('Failed opening \''.$file.'\' for inclusion (include_path=\''.get_include_path().'\')', E_USER_WARNING);
         return false;
     }
     
