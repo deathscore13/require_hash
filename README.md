@@ -9,7 +9,7 @@
 **test.php**:
 ```php
 // допустим, подключаемому файлу он тоже нужен
-require('require_hash.php');
+require('require_hash/require_hash.php');
 
 class BaseClass
 {
@@ -21,7 +21,7 @@ return 123;
 **test2.php**:
 ```php
 // допустим, подключаемому файлу он тоже нужен
-require('require_hash.php');
+require('require_hash/require_hash.php');
 
 class BaseClass
 {
@@ -33,7 +33,7 @@ return 123;
 **main.php**:
 ```php
 // подключение require_hash
-require('require_hash.php');
+require('require_hash/require_hash.php');
 
 // повторное подключение require_hash.php не вызовет ошибку и выведет 123
 echo(require_hash('test.php').PHP_EOL);
